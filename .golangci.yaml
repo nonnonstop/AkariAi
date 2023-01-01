@@ -1,0 +1,6 @@
+linters:
+  enable-all: true
+linters-settings:
+  gosec:
+    excludes:
+      - G404 # Use of weak random number generator (math/rand instead of crypto/rand)
