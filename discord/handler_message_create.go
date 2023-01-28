@@ -54,7 +54,7 @@ func (d *Discord) onMessageCreate(
 var messageCreateActions = &actions.ActionRun{
 	Actions: []actions.Action{
 		&actions.CheckRegex{
-			Regex: regexp.MustCompile(`(?:うん[ちこ]|UNKO|UNTI|UNCHI|大便|💩)`),
+			Regex: regexp.MustCompile(`(?:[うぅ]ん[ちこ]|UNKO|UNTI|UNCHI|大便|💩)`),
 			Action: &actions.ActionRun{
 				Actions: []actions.Action{
 					&actions.ActionReacton{
@@ -73,7 +73,7 @@ var messageCreateActions = &actions.ActionRun{
 			Action: &actions.ActionInterrupt{},
 		},
 		&actions.CheckRegex{
-			Regex: regexp.MustCompile(`^お(?:は|ふぁ)`),
+			Regex: regexp.MustCompile(`^[おぉ](?:は|ふぁ)`),
 			Action: &actions.ActionRun{
 				Actions: []actions.Action{
 					&actions.ActionGreeting{
@@ -309,7 +309,7 @@ var messageCreateActions = &actions.ActionRun{
 			},
 		},
 		&actions.CheckRegex{
-			Regex: regexp.MustCompile(`(?:おるが|いつか|団長|^!HELLOPLAYDANCE$)`),
+			Regex: regexp.MustCompile(`(?:[おぉ]るが|[いぃ][つっ]か|団長|^!HELLOPLAYDANCE$)`),
 			Action: &actions.ActionAsync{
 				Action: &actions.ActionRun{
 					Actions: []actions.Action{
